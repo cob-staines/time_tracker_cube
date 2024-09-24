@@ -138,9 +138,10 @@ bool checkSide(int16_t side, int16_t a){ //return true or false
 //Checking if cube on stable position
 bool checkIfCubeStable(int measurements[]){
   for (int i=0;i<60;i++){
-    if(i==59){return true;};
-    if(measurements[i] != measurements[i+1]){return false;};
-  } 
+    if(i==59){return true;}; // Return true if we've checked all measurements
+    if(measurements[i] != measurements[i+1]){return false;}; // Return false if any measurement differs
+  }
+  return false; // Default return statement to handle all cases
 }
 
 
